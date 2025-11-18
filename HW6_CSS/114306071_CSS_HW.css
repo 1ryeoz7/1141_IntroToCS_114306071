@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+.main-container{
+    display: flex; 
+    width: 1000px; 
+    margin: 50px auto;
+    background-color: #ffffff; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.left-panel{
+    width: 30%; /* 固定寬度，大約佔 350px */
+    background-color: #3b5072; 
+    color: #ffffff;
+    padding: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center
+}
+.photo-panel-container{
+    width: 100%;
+}
+.photo-panel {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px; 
+    object-fit: cover; 
+}
+.text-content{
+    padding: 20px 20px 10px 20px;
+    width: 100%; 
+    box-sizing: border-box;
+    text-align: left; 
+}
+
+.text-content h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.text-content .subtitle {
+    font-size: 1em;
+    margin: 5px 0 0 0;
+    color: #c9d6e5;
+}
+
+.left-panel .section {
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.left-panel h3 {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.left-panel p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.nccu-icon-container {
+    padding: 20px;
+}
+
+.nccu-icon {
+    width: 150px; 
+    height: auto;
+    display: block;
+    text-align: left;
+}
+
+
+
+.right-panel {
+    flex: 1; 
+    padding: 30px;
+}
+
+.right-panel h2 {
+    font-size: 1.5em;
+    color: #3b5072;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 5px;
+}
+.section-title {
+    font-size: 1.5em;
+    color: #3b5072;
+    margin-top: 0;
+    margin-bottom: 5px; 
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 5px; 
+}
+.section {
+    margin-bottom: 30px;
+}
+
+
+.education .entry {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.education .year {
+    font-weight: bold;
+    color: #555;
+    flex: 0 0 150px; 
+}
+
+.education .description {
+    flex: 1;
+}
+
+
+.skill-tags {
+    display: flex;
+    gap: 10px; 
+}
+
+.tag {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+
+.hw-lab {
+    display: flex;
+    gap: 20px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.hw-column, .lab-column {
+    flex: 1; /* 均分空間 */
+}
+
+.hw-column h3, .lab-column h3 {
+    margin-top: 0;
+    color: #3b5072;
+}
+
+.hw-column ul, .lab-column ul {
+    padding-left: 0;
+}
+
+.hw-column li, .lab-column li {
+    margin-bottom: 5px;
+}
+
+.music-list {
+    display: flex;
+    justify-content: space-evenly; 
+    margin-bottom: 15px;
+}
+
+.music-item {
+    text-align: center;
+    flex: 1;
+    padding: 0 5px;
+}
+
+.youtube-icon {
+    width: 40px; 
+    height: 40px;
+    display: block;
+    margin: 0 auto 5px auto;
+}
+
+.music-item p {
+    font-size: 0.9em;
+    margin: 0;
+    color: #555;
+}
+
+.music-note {
+    font-style: italic;
+    color: #777;
+    font-size: 0.9em;
+    text-align: center;
+}
