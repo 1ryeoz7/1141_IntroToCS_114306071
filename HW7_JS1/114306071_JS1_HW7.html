@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1A2B</title>
+</head>
+<body>
+    <h1>114306071_HW7_1A2B</h1>
+
+    <label for="guessInput">Enter 4 unique numbers:</label>
+    <input type="text" id="guessInput" maxlength="4">
+    <button onclick="play()">Guess!</button>
+
+    <div id="record"><b>Game Record:</b><br></div>
+
+    <script>
+
+        function generateAnswer() {
+            var digits = [];
+            for (let i = 0; i < 10; i++) digits.push(i);
+
+            var ans = "";
+
+            while (ans.length < 4) {
+                let idx = Math.floor(Math.random() * digits.length);
+                ans += digits[idx];
+                digits.splice(idx, 1);
+            }
+            return ans; 
+        }
+
+        var answer = generateAnswer();
+        var attempt = 0;
+
+        function play() {
+            var inputBox = document.getElementById("guessInput");
+            var guess = inputBox.value.trim();
+
+            if (!isValid(guess)) {
+                alert("Invalid input!");
+                return;
+            }
+
+            attempt++;
+
+            var result = checkAB(guess, answer);
+
+            var r = document.getElementById("record");
+            r.innerHTML += "第" + attempt + "次:" + guess + " → " + result + "<br>";
+
+            if (result === "4A0B") {
+                alert(`Correct!`);
+            }
+
+            inputBox.value = "";
+        }
+
+
+
+        function isValid(str) {
+
+            if (str.length !== 4) {
+                return false;
+            }
+
+            for (var i = 0; i < 4; i++) {
+                var ch = parseInt(str[i],10);
+                if (ch < 0 || ch > 9) {
+                    return false;
+                }
+            }
+
+            for (let i = 0; i < 4; i++) {
+                for (let j = i + 1; j < 4; j++) {
+                    if (str[i] === str[j]) {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+
+        function checkAB(guess, ans) {
+            var A = 0, B = 0;
+            var result = "";
+
+            for (var i = 0; i < 4; i++) {
+                if (guess[i] === ans[i]) {
+                    A++;
+                } else if (ans.includes(guess[i])) {
+                    B++;
+                }
+            }
+            result = A + "A" + B + "B";
+
+            return result;
+        }
+
+    </script>
+
+</body>
+</html>
